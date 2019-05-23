@@ -1,4 +1,4 @@
-package elvis.view.indexablerecyclerview;
+package me.elvis.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,11 +9,9 @@ import android.graphics.RectF;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.widget.SectionIndexer;
-import me.elvis.view.indexablerecyclerview.R;
 
 public class IndexScroller extends RecyclerView.AdapterDataObserver {
 

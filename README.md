@@ -3,12 +3,18 @@
 ## 效果
 <img src="sample.gif" width="320px"/>
 
+## 引用方式
+
+```
+implementation 'me.elvis:indexablerecyclerview:0.0.2'
+```
+
 ## 用法
 
 在布局文件中引入控件
 
 ```xml
-<elvis.view.indexablerecyclerview.IndexableRecyclerView
+<me.elvis.view.IndexableRecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
