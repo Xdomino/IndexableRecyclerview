@@ -40,8 +40,8 @@ public class IndexScroller extends RecyclerView.AdapterDataObserver {
         mScaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.IndexableRecyclerView);
         int textColor = ta.getColor(R.styleable.IndexableRecyclerView_textColor, Color.BLACK);
-        mPadding = ta.getDimensionPixelSize(R.styleable.IndexableRecyclerView_padding, (int) (10 * mDensity));
-        mGap = ta.getDimensionPixelSize(R.styleable.IndexableRecyclerView_padding, (int) (3 * mDensity));
+        mPadding = ta.getDimensionPixelSize(R.styleable.IndexableRecyclerView_padding, (int) (10 * mDensity + 0.5));
+        mGap = ta.getDimensionPixelSize(R.styleable.IndexableRecyclerView_padding, (int) (3 * mDensity + 0.5));
         int defTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 12f, context.getResources().getDisplayMetrics());
         int textSize = ta.getDimensionPixelSize(R.styleable.IndexableRecyclerView_textSize, defTextSize);
