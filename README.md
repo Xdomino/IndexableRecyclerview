@@ -13,6 +13,7 @@
         android:layout_height="match_parent"/>
 ```
 支持的自定义属性
+
 | 属性      | 单位      | 说明                      |
 | --------- | --------- | ------------------------- |
 | textColor | color     | 索引字体颜色              |
