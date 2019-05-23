@@ -1,0 +1,28 @@
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
+
+publish {
+    userOrg = 'hpnb' //bintray注册的用户名（不是邮箱）
+    groupId = 'me.elvis'
+    artifactId = 'indexablerecyclerview' //项目名称
+    publishVersion = '0.0.1' //版本号
+    desc = 'android custom view'
+    website = 'https://github.com/Xdomino/IndexableRecyclerview'
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+}
+repositories {
+    mavenCentral()
+}
