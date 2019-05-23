@@ -1,7 +1,8 @@
 # IndexableRecyclerview
-为Recycleview增加索引功能，只支持列表索引。
+为Recycleview增加索引功能
 ## 效果
 <img src="sample.gif" width="320px"/>
+
 ## 用法
 
 在布局文件中引入控件
@@ -40,4 +41,6 @@ class MyAdapter : RecyclerView.Adapter<ViewHolder>(), SectionIndexer {
         }
     }
 ```
+## 其他
 
+`IndexableRecyclerView.setEnableIndex()` 是否启用索引，false隐藏索引。

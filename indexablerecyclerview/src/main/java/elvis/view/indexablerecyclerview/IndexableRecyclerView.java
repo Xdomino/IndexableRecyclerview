@@ -20,7 +20,6 @@ public class IndexableRecyclerView extends RecyclerView {
     public IndexableRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mIndexScroller = new IndexScroller(context, attrs, this);
-        setLayoutManager(new LinearLayoutManager(context));
     }
 
     public boolean isEnableIndex() {
