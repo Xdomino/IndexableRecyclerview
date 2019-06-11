@@ -6,7 +6,7 @@
 ## 引用方式
 
 ```
-implementation 'me.elvis:indexablerecyclerview:0.0.2'
+implementation 'me.elvis:indexablerecyclerview:0.0.3'
 ```
 
 ## 用法
