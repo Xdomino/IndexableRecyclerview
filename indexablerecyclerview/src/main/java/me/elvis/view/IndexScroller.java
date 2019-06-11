@@ -130,21 +130,7 @@ public class IndexScroller extends RecyclerView.AdapterDataObserver {
     void onSizeChanged(int w, int h, int oldw, int oldh) {
         mListViewWidth = w;
         mListViewHeight = h;
-        final float margin = (mListViewHeight - mHeight) / 2;
-        mIndexbarRect = new RectF(w - mWidth
-                , margin
-                , w
-                , h - margin);
-    }
-
-    private void scrollToPosition(int position) {
-        ((LinearLayoutManager) mRv.getLayoutManager()).scrollToPositionWithOffset(position, 0);
-    }
-
-    private int getSectionByPoint(float y) {
-        if (mSections == null || mSections.length == 0)
-            return 0;
-        return (int) Math.floor((y - mIndexbarRect.top) / (mSingle + mGap));
+        initRect();
     }
 
     void setAdapter(RecyclerView.Adapter adapter) {
@@ -163,8 +149,28 @@ public class IndexScroller extends RecyclerView.AdapterDataObserver {
                 }
             }
             mWidth = mMaxSingleWidth + mPadding * 2;
+            initRect();
         }
     }
+
+    private void initRect() {
+        final float margin = (mListViewHeight - mHeight) / 2;
+        mIndexbarRect = new RectF(mListViewWidth - mWidth
+                , margin
+                , mListViewWidth
+                , mListViewHeight - margin);
+    }
+
+    private void scrollToPosition(int position) {
+        ((LinearLayoutManager) mRv.getLayoutManager()).scrollToPositionWithOffset(position, 0);
+    }
+
+    private int getSectionByPoint(float y) {
+        if (mSections == null || mSections.length == 0)
+            return 0;
+        return (int) Math.floor((y - mIndexbarRect.top) / (mSingle + mGap));
+    }
+
 
     @Override
     public void onChanged() {

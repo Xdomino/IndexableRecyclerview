@@ -14,7 +14,7 @@ publish {
     userOrg = 'hpnb' //bintray注册的用户名（不是邮箱）
     groupId = 'me.elvis'
     artifactId = 'indexablerecyclerview' //项目名称
-    publishVersion = '0.0.2' //版本号
+    publishVersion = '0.0.3' //版本号
     desc = 'android custom view'
     website = 'https://github.com/Xdomino/IndexableRecyclerview'
 }

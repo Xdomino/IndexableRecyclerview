@@ -2,6 +2,7 @@ package me.elvis.indexablerecyclerview
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val adapter = MyAdapter()
+        list.layoutManager = LinearLayoutManager(this)
         list.adapter = adapter
     }
 
